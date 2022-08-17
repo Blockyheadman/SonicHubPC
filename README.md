@@ -1,7 +1,7 @@
 # Sonic Hub PC
 Made By: Blockyheadman
 
-![Sonic Hub | Made By: Blockyheadman | A Port for PC (and maybe mobile)](https://myoctocat.com/assets/images/base-octocat.svg)
+![Sonic Hub | Made By: Blockyheadman | A Port for PC (and maybe mobile)](icon-background.png)
 
 ## Welcome
 Welcome to Sonic Hub PC!
