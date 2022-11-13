@@ -14,6 +14,8 @@ For now, here's the list:
 * Buttons that lead to online game links
 * An alpha message
 * Sound effects
+* Changelog
+* Animations
 * Music
 
 Yeah.. It's not much but the more I work on it, the more it will have.
@@ -24,4 +26,5 @@ My goal with this project is to learn more about making UI with godot and making
 ## Available Platforms
 Currently the list of supported platforms is small but may increase over time:
 * Windows
+* MacOS (NEW!!)
 * Linux/X11
