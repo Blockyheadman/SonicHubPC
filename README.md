@@ -3,6 +3,8 @@ Made By: Blockyheadman
 
 ![Sonic Hub | Made By: Blockyheadman | A Port for PC (and maybe mobile)](icon-background.png)
 
+![GitHub all releases](https://img.shields.io/github/downloads/Blockyheadman/SonicHubPC/total)
+
 ## Welcome
 Welcome to Sonic Hub PC!
 Sonic Hub PC is a PC version of the online version of Sonic Hub made by Blockyheadman (me)
