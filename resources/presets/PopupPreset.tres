@@ -1,0 +1,131 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[ext_resource path="res://resources/ariblk.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=9]
+size = 13
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.670588, 0.670588, 0.670588, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.160784, 0.164706, 0.333333, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="DynamicFont" id=8]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=5]
+size = 15
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0392157, 0.0431373, 0.0941176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+expand_margin_top = 22.0
+
+[resource]
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.45098, 1, 1 )
+Button/fonts/font = SubResource( 9 )
+Button/styles/hover = SubResource( 11 )
+Button/styles/normal = SubResource( 10 )
+Button/styles/pressed = SubResource( 12 )
+Label/fonts/font = SubResource( 8 )
+PopupMenu/colors/font_color = Color( 1, 1, 1, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 1, 1, 1, 1 )
+PopupMenu/fonts/font = SubResource( 13 )
+PopupMenu/fonts/font_separator = SubResource( 15 )
+PopupMenu/styles/hover = SubResource( 16 )
+PopupMenu/styles/panel = SubResource( 14 )
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/fonts/title_font = SubResource( 5 )
+WindowDialog/styles/panel = SubResource( 6 )

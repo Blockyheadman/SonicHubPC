@@ -1,0 +1,335 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://resources/ariblk.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/audio/MenuAccept.wav" type="AudioStream" id=2]
+[ext_resource path="res://resources/audio/MenuBleep.wav" type="AudioStream" id=3]
+[ext_resource path="res://resources/audio/Menu.mp3" type="AudioStream" id=4]
+[ext_resource path="res://resources/textures/back.png" type="Texture" id=5]
+[ext_resource path="res://resources/textures/back-pressed.png" type="Texture" id=6]
+[ext_resource path="res://resources/textures/back-hover.png" type="Texture" id=7]
+[ext_resource path="res://scripts/BlueBlurEngine.gd" type="Script" id=8]
+[ext_resource path="res://resources/HomeButtonsFont.tres" type="DynamicFont" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 1, 0.384314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0.607843, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id=3]
+resource_name = "GameTranisiton"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0.501961, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -20.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "transition_done"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "GameTransitionHome"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0.501961, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -10.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "home_transition_done"
+} ]
+}
+
+[node name="BlueBlurEngine" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.141176, 0.152941, 0.25098, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WelcomeLabel" type="Label" parent="."]
+anchor_left = 0.457
+anchor_top = 0.125
+anchor_right = 0.555
+anchor_bottom = 0.125
+margin_left = -194.43
+margin_top = -45.625
+margin_right = 188.55
+margin_bottom = 45.375
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Welcome To Blue Blur Engine!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LearnMoreLabel" type="Label" parent="."]
+anchor_left = 0.143878
+anchor_top = 0.715328
+anchor_right = 0.856122
+anchor_bottom = 0.759124
+custom_fonts/font = SubResource( 2 )
+text = "Hover or tap & hold to learn more!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="MadeByLabel" type="Label" parent="."]
+anchor_left = 0.0316327
+anchor_top = 0.918248
+anchor_right = 0.968367
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.74902, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "All of the apps & projects are made by Blockyheadman :)"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="BlueBlurDemo" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.385
+anchor_right = 0.5
+anchor_bottom = 0.467
+margin_left = -143.5
+margin_top = 0.274994
+margin_right = 143.5
+margin_bottom = 0.10498
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "View Blue Blur Engine Demo"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlueBlurCode" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.502
+anchor_right = 0.5
+anchor_bottom = 0.584
+margin_left = -139.5
+margin_top = 0.129974
+margin_right = 139.5
+margin_bottom = -0.0400391
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "View Blue Blur Engine Code"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlueBlurGame" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.619
+anchor_right = 0.5
+anchor_bottom = 0.701
+margin_left = -133.5
+margin_top = -0.0150146
+margin_right = 133.5
+margin_bottom = -0.185028
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 9 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+text = "Game Made With Blue Blur"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+
+[node name="GameTransitions" type="AnimationPlayer" parent="."]
+anims/GameTranisiton = SubResource( 3 )
+anims/GameTransitionHome = SubResource( 5 )
+
+[node name="Bleep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="button_down" from="BlueBlurDemo" to="." method="_on_BlueBlurDemo_button_down"]
+[connection signal="mouse_entered" from="BlueBlurDemo" to="." method="_on_BlueBlurDemo_mouse_entered"]
+[connection signal="mouse_exited" from="BlueBlurDemo" to="." method="_on_BlueBlurDemo_mouse_exited"]
+[connection signal="pressed" from="BlueBlurDemo" to="." method="_on_BlueBlurDemo_pressed"]
+[connection signal="button_down" from="BlueBlurCode" to="." method="_on_BlueBlurCode_button_down"]
+[connection signal="mouse_entered" from="BlueBlurCode" to="." method="_on_BlueBlurCode_mouse_entered"]
+[connection signal="mouse_exited" from="BlueBlurCode" to="." method="_on_BlueBlurCode_mouse_exited"]
+[connection signal="pressed" from="BlueBlurCode" to="." method="_on_BlueBlurCode_pressed"]
+[connection signal="button_down" from="BlueBlurGame" to="." method="_on_BlueBlurGame_button_down"]
+[connection signal="mouse_entered" from="BlueBlurGame" to="." method="_on_BlueBlurGame_mouse_entered"]
+[connection signal="mouse_exited" from="BlueBlurGame" to="." method="_on_BlueBlurGame_mouse_exited"]
+[connection signal="pressed" from="BlueBlurGame" to="." method="_on_BlueBlurGame_pressed"]
+[connection signal="mouse_entered" from="BackButton" to="." method="_on_BackButton_mouse_entered"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

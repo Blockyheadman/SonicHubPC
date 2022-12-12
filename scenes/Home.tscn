@@ -1,0 +1,969 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://resources/ariblk.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/audio/White-Space.mp3" type="AudioStream" id=2]
+[ext_resource path="res://scripts/Home.gd" type="Script" id=3]
+[ext_resource path="res://resources/audio/MenuAccept.wav" type="AudioStream" id=4]
+[ext_resource path="res://resources/audio/MenuBleep.wav" type="AudioStream" id=5]
+[ext_resource path="res://resources/HomeButtonsFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://resources/sprites/lay1.png" type="Texture" id=7]
+[ext_resource path="res://resources/sprites/lay2.png" type="Texture" id=8]
+[ext_resource path="res://resources/sprites/11.png" type="Texture" id=9]
+[ext_resource path="res://resources/sprites/8.png" type="Texture" id=10]
+[ext_resource path="res://resources/sprites/7.png" type="Texture" id=11]
+[ext_resource path="res://resources/sprites/10.png" type="Texture" id=12]
+[ext_resource path="res://resources/sprites/12.png" type="Texture" id=13]
+[ext_resource path="res://resources/sprites/9.png" type="Texture" id=14]
+[ext_resource path="res://resources/sprites/4.png" type="Texture" id=15]
+[ext_resource path="res://resources/sprites/5.png" type="Texture" id=16]
+[ext_resource path="res://resources/sprites/6.png" type="Texture" id=17]
+[ext_resource path="res://resources/sprites/1.png" type="Texture" id=18]
+[ext_resource path="res://resources/sprites/3.png" type="Texture" id=19]
+[ext_resource path="res://resources/sprites/2.png" type="Texture" id=20]
+[ext_resource path="res://resources/textures/close-pressed.png" type="Texture" id=21]
+[ext_resource path="res://resources/textures/close-hover.png" type="Texture" id=22]
+[ext_resource path="res://resources/textures/close.png" type="Texture" id=23]
+[ext_resource path="res://resources/presets/PopupPreset.tres" type="Theme" id=24]
+[ext_resource path="res://resources/sprites/run7.png" type="Texture" id=25]
+[ext_resource path="res://resources/sprites/run2.png" type="Texture" id=26]
+[ext_resource path="res://resources/sprites/run6.png" type="Texture" id=27]
+[ext_resource path="res://resources/sprites/run5.png" type="Texture" id=28]
+[ext_resource path="res://resources/sprites/run1.png" type="Texture" id=29]
+[ext_resource path="res://resources/sprites/run8.png" type="Texture" id=30]
+[ext_resource path="res://resources/sprites/run3.png" type="Texture" id=31]
+[ext_resource path="res://resources/sprites/run4.png" type="Texture" id=32]
+[ext_resource path="res://resources/sprites/boss-left2.png" type="Texture" id=33]
+[ext_resource path="res://resources/sprites/boss-left.png" type="Texture" id=34]
+[ext_resource path="res://resources/textures/Gear.png" type="Texture" id=35]
+[ext_resource path="res://resources/textures/Gear-pressed.png" type="Texture" id=36]
+[ext_resource path="res://resources/textures/Gear-hover.png" type="Texture" id=37]
+
+[sub_resource type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0, 0.607843, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0, 1, 0.384314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=26]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 13
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.670588, 0.670588, 0.670588, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.160784, 0.164706, 0.333333, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+
+[sub_resource type="DynamicFont" id=31]
+size = 18
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 15
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.0392157, 0.0431373, 0.0941176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+expand_margin_top = 22.0
+
+[sub_resource type="Theme" id=32]
+Button/colors/font_color_pressed = Color( 0, 0.45098, 1, 1 )
+Button/fonts/font = SubResource( 27 )
+Button/styles/hover = SubResource( 28 )
+Button/styles/normal = SubResource( 29 )
+Button/styles/pressed = SubResource( 30 )
+Label/fonts/font = SubResource( 31 )
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/fonts/title_font = SubResource( 33 )
+WindowDialog/styles/panel = SubResource( 34 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=45]
+size = 14
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=42]
+resource_name = "BossLeft"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SonicSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 34 ), ExtResource( 33 ) ]
+}
+
+[sub_resource type="Animation" id=43]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SonicSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 34 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "SonicLay"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SonicSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 8 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "SonicRun"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SonicSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "SonicWalk"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SonicSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "GameClose"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0.501961, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -20.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_animation_close"
+} ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "GameTransition"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0.501961, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasModulate:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Music:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -10.0, -20.0 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_animation_blue_blur"
+} ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "GameTransitionBlueBlur"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0.501961, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasModulate:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Music:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -10.0 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_blue_blur_animation_finished"
+} ]
+}
+
+[node name="Home" type="Control" groups=["Persist"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.141176, 0.152941, 0.25098, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WelcomeLabel" type="Label" parent="."]
+anchor_left = 0.49
+anchor_top = 0.125
+anchor_right = 0.522
+anchor_bottom = 0.125
+margin_left = -210.6
+margin_top = -45.625
+margin_right = 204.72
+margin_bottom = 45.375
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = SubResource( 4 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Welcome To Sonic Hub PC!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LearnMoreLabel" type="Label" parent="."]
+anchor_left = 0.143878
+anchor_top = 0.715328
+anchor_right = 0.856122
+anchor_bottom = 0.759124
+custom_fonts/font = SubResource( 3 )
+text = "Hover or tap & hold to learn more!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="MadeByLabel" type="Label" parent="."]
+anchor_left = 0.0316327
+anchor_top = 0.918248
+anchor_right = 0.968367
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.74902, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "All of the apps & projects are made by Blockyheadman :)"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="SonicSprite" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.28
+anchor_right = 0.5
+anchor_bottom = 0.28
+margin_left = -78.0
+margin_top = -71.8
+margin_right = 78.0
+margin_bottom = 72.2
+texture = ExtResource( 34 )
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlueBlur" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.385
+anchor_right = 0.5
+anchor_bottom = 0.467
+margin_left = -92.0
+margin_top = 0.274994
+margin_right = 92.0
+margin_bottom = 0.10498
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "Blue Blur Engine"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="InfiniteRunners" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.502
+anchor_right = 0.5
+anchor_bottom = 0.584
+margin_left = -116.0
+margin_top = 0.129974
+margin_right = 116.0
+margin_bottom = -0.0400391
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 18 )
+text = "Sonic Infinite Runners"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BossBattle" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.619
+anchor_right = 0.5
+anchor_bottom = 0.701
+margin_left = -96.0
+margin_top = -0.0150146
+margin_right = 96.0
+margin_bottom = -0.185028
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 22 )
+text = "Sonic Boss Battle"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CloseButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VersionLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -30.0
+margin_right = 128.0
+margin_bottom = -7.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 26 )
+text = "Version: 1.0.0"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SettingsButton" type="TextureButton" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 35 )
+texture_pressed = ExtResource( 36 )
+texture_hover = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Warning" type="AcceptDialog" parent="."]
+anchor_left = 0.0591837
+anchor_top = 0.0445255
+anchor_right = 0.940816
+anchor_bottom = 0.955474
+theme = ExtResource( 24 )
+popup_exclusive = true
+window_title = "Alpha Warning!"
+dialog_text = "Sonic Hub PC is currently in alpha! This version you are playing is to test features, bug fix, and to simply just mess around with. Please note that some features may not work properly or be implemented in this release! Have fun!"
+dialog_autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ExitConfirmation" type="ConfirmationDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.412409
+anchor_right = 0.5
+anchor_bottom = 0.584
+margin_left = -140.0
+margin_right = 140.0
+margin_bottom = 2.45996
+rect_min_size = Vector2( 150, 52.5 )
+theme = SubResource( 32 )
+popup_exclusive = true
+window_title = "Do you accept?"
+dialog_text = "Do you really wish to exit?"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Changelog" type="AcceptDialog" parent="."]
+anchor_left = 0.343
+anchor_top = 0.035
+anchor_right = 0.653
+anchor_bottom = 0.99
+margin_left = -152.07
+margin_top = 0.0249996
+margin_right = 152.03
+margin_bottom = -0.150024
+theme = ExtResource( 24 )
+popup_exclusive = true
+window_title = "Changelog"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Changelog"]
+anchor_right = 1.0
+anchor_bottom = 0.942
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -2.06799
+
+[node name="Label" type="Label" parent="Changelog/ScrollContainer"]
+margin_right = 440.0
+margin_bottom = 1041.0
+size_flags_horizontal = 3
+text = "Ver: 1.0.0:
+
+* Added settings menu
+* Added fun audio effects
+
+Ver 0.3.0:
+
+* Added Changelog
+* Added Sonic Animation
+* Fixed Blue Blur button letting you interact with objects while in transition animation.
+* Fixed Blue Blur screen back button letting you interact with objects while in transition animation.
+
+Ver 0.2.0: 
+
+* Added Blue Blur Menu
+* Added menu transitions between screens
+* Added Blue Blur buttons
+* Added links for Blue Blur buttons
+* Fixed sounds to play at beginning of file
+* Fixed main menu text not auto wrapping
+
+Ver 0.1.1: 
+
+* Added confirmation menu to close button
+* Added version label
+* Made confirmation menu center
+
+Ver 0.1.0: 
+
+* Added Music/SFX
+* Added Sonic Animation
+* Added Buttons with links
+* Added Close button"
+autowrap = true
+
+[node name="SettingsMenu" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -256.0
+margin_right = 180.0
+margin_bottom = 256.0
+theme = ExtResource( 24 )
+popup_exclusive = true
+window_title = "App Settings"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WindowSettings" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.06
+anchor_right = 0.5
+anchor_bottom = 0.06
+margin_left = -82.5
+margin_top = -13.22
+margin_right = 82.5
+margin_bottom = 12.78
+text = "Window Settings"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WindowOptions" type="OptionButton" parent="SettingsMenu"]
+anchor_left = 0.375
+anchor_top = 0.143
+anchor_right = 0.619
+anchor_bottom = 0.143
+margin_left = -111.0
+margin_top = -15.716
+margin_right = 113.16
+margin_bottom = 15.284
+text = "Fullscreen"
+align = 1
+items = [ "Windowed", null, false, 0, null, "Windowed Fullscreen", null, false, 1, null, "Fullscreen", null, false, 2, null ]
+selected = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioSettingsLabel" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.278
+anchor_right = 0.5
+anchor_bottom = 0.278
+margin_left = -72.0
+margin_top = -12.836
+margin_right = 72.0
+margin_bottom = 13.164
+text = "Audio Settings"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MusicLabel" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.365
+anchor_right = 0.5
+anchor_bottom = 0.365
+margin_left = -19.0
+margin_top = -8.88
+margin_right = 19.0
+margin_bottom = 9.12
+custom_fonts/font = SubResource( 44 )
+text = "Music"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioSlider" type="HSlider" parent="SettingsMenu"]
+anchor_left = 0.397
+anchor_top = 0.416
+anchor_right = 0.597
+anchor_bottom = 0.417
+margin_left = -126.92
+margin_top = -11.492
+margin_right = 129.08
+margin_bottom = 10.996
+min_value = -70.0
+max_value = -10.0
+value = -10.0
+tick_count = 70
+ticks_on_borders = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SFXLabel" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.505
+anchor_right = 0.5
+anchor_bottom = 0.505
+margin_left = -13.0
+margin_top = -9.06
+margin_right = 13.0
+margin_bottom = 8.94
+custom_fonts/font = SubResource( 44 )
+text = "SFX"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenu"]
+anchor_left = 0.397
+anchor_top = 0.558
+anchor_right = 0.597
+anchor_bottom = 0.558
+margin_left = -126.92
+margin_top = -12.196
+margin_right = 129.08
+margin_bottom = 10.804
+min_value = -70.0
+max_value = 0.0
+tick_count = 70
+ticks_on_borders = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Extras" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.638
+anchor_right = 0.5
+anchor_bottom = 0.638
+margin_left = -32.0
+margin_top = -13.156
+margin_right = 32.0
+margin_bottom = 12.844
+text = "Extras"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MusicMode" type="Button" parent="SettingsMenu"]
+anchor_left = 0.419
+anchor_top = 0.722
+anchor_right = 0.575
+anchor_bottom = 0.722
+margin_left = -22.84
+margin_top = -16.164
+margin_right = 25.0
+margin_bottom = 15.836
+text = "Audio Effects"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MusicModeLabel" type="Label" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.825
+anchor_right = 0.5
+anchor_bottom = 0.825
+margin_left = -67.5
+margin_top = -12.9
+margin_right = 67.5
+margin_bottom = 13.1
+custom_fonts/font = SubResource( 45 )
+text = "Normal Mode"
+align = 1
+
+[node name="DoneButton" type="Button" parent="SettingsMenu"]
+anchor_left = 0.464
+anchor_top = 1.0
+anchor_right = 0.531
+anchor_bottom = 1.0
+margin_left = -18.54
+margin_top = -38.5
+margin_right = 20.34
+margin_bottom = -14.5
+text = "Done"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SonicAnimations" type="AnimationPlayer" parent="."]
+anims/BossLeft = SubResource( 42 )
+anims/RESET = SubResource( 43 )
+anims/SonicLay = SubResource( 14 )
+anims/SonicRun = SubResource( 38 )
+anims/SonicWalk = SubResource( 24 )
+
+[node name="MenuTransitions" type="AnimationPlayer" parent="."]
+anims/GameClose = SubResource( 39 )
+anims/GameTransition = SubResource( 40 )
+anims/GameTransitionBlueBlur = SubResource( 41 )
+
+[node name="Bleep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="mouse_entered" from="WelcomeLabel" to="." method="_on_welcomeLabel_mouse_entered"]
+[connection signal="mouse_exited" from="WelcomeLabel" to="." method="_on_WelcomeLabel_mouse_exited"]
+[connection signal="button_down" from="BlueBlur" to="." method="_on_BlueBlur_button_down"]
+[connection signal="mouse_entered" from="BlueBlur" to="." method="_on_BlueBlur_mouse_entered"]
+[connection signal="mouse_exited" from="BlueBlur" to="." method="_on_BlueBlur_mouse_exited"]
+[connection signal="pressed" from="BlueBlur" to="." method="_on_BlueBlur_pressed"]
+[connection signal="button_down" from="InfiniteRunners" to="." method="_on_InfiniteRunners_button_down"]
+[connection signal="mouse_entered" from="InfiniteRunners" to="." method="_on_InfiniteRunners_mouse_entered"]
+[connection signal="mouse_exited" from="InfiniteRunners" to="." method="_on_InfiniteRunners_mouse_exited"]
+[connection signal="pressed" from="InfiniteRunners" to="." method="_on_InfiniteRunners_pressed"]
+[connection signal="button_down" from="BossBattle" to="." method="_on_BossBattle_button_down"]
+[connection signal="mouse_entered" from="BossBattle" to="." method="_on_BossBattle_mouse_entered"]
+[connection signal="mouse_exited" from="BossBattle" to="." method="_on_BossBattle_mouse_exited"]
+[connection signal="pressed" from="BossBattle" to="." method="_on_BossBattle_pressed"]
+[connection signal="mouse_entered" from="CloseButton" to="." method="_on_CloseButton_mouse_entered"]
+[connection signal="mouse_exited" from="CloseButton" to="." method="_on_CloseButton_mouse_exited"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="mouse_entered" from="VersionLabel" to="." method="_on_VersionLabel_mouse_entered"]
+[connection signal="mouse_exited" from="VersionLabel" to="." method="_on_VersionLabel_mouse_exited"]
+[connection signal="mouse_entered" from="SettingsButton" to="." method="_on_SettingsButton_mouse_entered"]
+[connection signal="mouse_exited" from="SettingsButton" to="." method="_on_SettingsButton_mouse_exited"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="confirmed" from="Warning" to="." method="_on_Warning_confirmed"]
+[connection signal="confirmed" from="ExitConfirmation" to="." method="_on_ExitConfirmation_confirmed"]
+[connection signal="item_selected" from="SettingsMenu/WindowOptions" to="." method="_on_WindowOptions_item_selected"]
+[connection signal="value_changed" from="SettingsMenu/AudioSlider" to="." method="_on_AudioSlider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/MusicMode" to="." method="_on_MusicMode_pressed"]
+[connection signal="pressed" from="SettingsMenu/DoneButton" to="." method="_on_DoneButton_pressed"]

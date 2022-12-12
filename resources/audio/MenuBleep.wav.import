@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MenuBleep.wav-d42ae9e43cbd958918613dab5cd4b60d.sample"
+
+[deps]
+
+source_file="res://resources/audio/MenuBleep.wav"
+dest_files=[ "res://.import/MenuBleep.wav-d42ae9e43cbd958918613dab5cd4b60d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
