@@ -21,7 +21,7 @@ I'm deciding to make it on PC so it's gives a better experience for PC users! (a
 ## Available Platforms
 Currently the list of supported platforms is small but may increase over time:
 * Windows
-* MacOS (NEW!!)
+* MacOS
 * Linux/X11
 
 ## My Goal
